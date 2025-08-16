@@ -12,3 +12,7 @@ Contiene archivos simples para que puedas practicar creación de ramas, commits,
 git config --global user.name "Coty Strumia"
 git config --global user.email "constanzastrumia28@gmail.com"
 git config --global init.defaultBranch main
+
+# primer rama
+Se mejoro el saludo de el archivo app.js y se agrego una funcion para pasar un parametro
+
