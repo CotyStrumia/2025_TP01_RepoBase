@@ -1,5 +1,5 @@
 // Versión inicial
-function saludarx() {
+function saludar() {
     console.log("Hola mundo");
 }
 
