@@ -14,5 +14,5 @@ git config --global user.email "constanzastrumia28@gmail.com"
 git config --global init.defaultBranch main
 
 # primer rama
-Se mejoro el saludo de el archivo app.js y se agrego una funcion para pasar un parametro
-
+Se mejoro el saludo de el archivo app.js y se agrego una funcion para pasar un parameto
+Se hizo un segundo commit con otros cambios en app.js
