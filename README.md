@@ -1,29 +1,32 @@
-# Proyecto Base para Práctica de Git
+# Rama de funcionalidad
+git checkout -b feature/mejoras
+# (commit 1 y 2 en src/app.js)
+git push -u origin feature/mejoras
 
-Este proyecto es parte del Trabajo Práctico 01 – Git Básico.
+# Simular error en main
+git checkout main
+# (introducir error)
+git commit -m "chore: error simulado"
+git push
 
-Contiene archivos simples para que puedas practicar creación de ramas, commits, solución de errores y versionado.
+# Hotfix
+git checkout -b hotfix/arreglos
+# (corregir)
+git commit -m "fix: corregir error simulado"
+git push -u origin hotfix/arreglos
+git checkout main
+git merge --no-ff hotfix/arreglos -m "merge: integrar hotfix"
+git push
 
-## Estructura
-- `src/app.js`: contiene un script básico.
-- `data/info.txt`: contiene datos de ejemplo.
+# Propagar fix a feature
+git checkout feature/mejoras
+git merge main -m "merge: traer hotfix"
+git push
 
-# Configuracion
-git config --global user.name "Coty Strumia"
-git config --global user.email "constanzastrumia28@gmail.com"
-git config --global init.defaultBranch main
+# PR feature/mejoras → main (en GitHub) y Merge (Create a merge commit)
 
-# primer rama
-Se mejoro el saludo de el archivo app.js y se agrego una funcion para pasar un parameto
-Se hizo un segundo commit con otros cambios en app.js
-
-# Error
-Simule un error en el main cambiando una el nombre de una funcion para que el error sea rapid
-
-# Correccion
-Cree una rama hoxfix para arreglar ese error y volver el problema atras
-Uni la rama de el error
-
-# Rama
-Traje toda la info de la rama de mejoras a el main principal
-Elimine la rama
+# Tag
+git checkout main
+git pull
+git tag -a v1.0 -m "v1.0: primera versión estable"
+git push origin v1.0
